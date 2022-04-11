@@ -1,5 +1,6 @@
 https://play.onflow.org/4ccad12b-f645-46d3-85f9-a6e26a36623d
 # EducationFund
+This example demonstrates how a resource ownership is used for verifying the caller - msg.sender in cadence.
 ## Problem
 A parent or guardian wishes to establish an education fund for their child in order help them pay for post-secondary studies. As a forward-thinking parent, they want to put the fund on a blockchain, and Flow is their top choice.
 
