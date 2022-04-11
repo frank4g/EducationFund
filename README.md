@@ -1,5 +1,5 @@
-https://play.onflow.org/4ccad12b-f645-46d3-85f9-a6e26a36623d
-# EducationFund
+
+# [EducationFund]https://play.onflow.org/4ccad12b-f645-46d3-85f9-a6e26a36623d)
 This example demonstrates how a resource ownership is used for verifying the caller - msg.sender in cadence.
 
 ## Problem
