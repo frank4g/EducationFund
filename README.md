@@ -1,6 +1,7 @@
 https://play.onflow.org/4ccad12b-f645-46d3-85f9-a6e26a36623d
 # EducationFund
 This example demonstrates how a resource ownership is used for verifying the caller - msg.sender in cadence.
+
 ## Problem
 A parent or guardian wishes to establish an education fund for their child in order help them pay for post-secondary studies. As a forward-thinking parent, they want to put the fund on a blockchain, and Flow is their top choice.
 
@@ -48,6 +49,48 @@ Use 0x05 for  Recipient/Child
 1. Execute FTCheckBalance to check flowtoken balance of accounts used for testing
 2. Execute EFCheckSafeFundParams to check current params of safefund used for this test.
 
+## Msg.Sender Idenfication
+#### [IdToken](https://github.com/frank4g/EducationFund/blob/main/contracts/EducationFund.cdc#L39)
+
+```cdc
+    pub resource IDToken {
+        pub var amount:UFix64
+        pub var address:Address?
+        init(address:Address?, amount:UFix64){
+            //pre {
+            //    address != nil:
+            //    "address is invalid"
+            //}
+            self.address=address
+            self.amount=amount
+
+        }
+    }
+
+    pub resource IDTokenGenerator {
+        pub fun generateIDToken(amount:UFix64):@IDToken {
+            return <- create IDToken(address:self.owner?.address,amount:amount)
+        }
+    }
+
+    pub fun createIDTokenGenerator():@IDTokenGenerator {
+        return <- create IDTokenGenerator()
+    }
+```
+#### [usage](https://github.com/frank4g/EducationFund/blob/main/contracts/EducationFund.cdc#L143)
+```cdc
+    pub fun withdraw(idtoken:@IDToken){
+        pre {
+            idtoken != nil:
+                "Invalid idtoken!"
+            idtoken.address == self.recipient:
+                "Only registered recipient is allowed to call this function"
+            self.recipientVault.borrow != nil:
+                "Invalid receiver capability!"
+        }
+        _;
+    }
+```
 ## Reference
 #### Prerequisites
 
