@@ -1,6 +1,6 @@
 
 # EducationFund
-This example demonstrates how a resource ownership is used for verifying the caller - msg.sender in cadence.
+This example demonstrates how to identify the caller - msg.sender using resource ownership in cadence.
 
 ## Problem
 A parent or guardian wishes to establish an education fund for their child in order help them pay for post-secondary studies. As a forward-thinking parent, they want to put the fund on a blockchain, and Flow is their top choice.
