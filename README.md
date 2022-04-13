@@ -1,5 +1,5 @@
 
-# [EducationFund](https://play.onflow.org/4ccad12b-f645-46d3-85f9-a6e26a36623d)
+# EducationFund
 This example demonstrates how a resource ownership is used for verifying the caller - msg.sender in cadence.
 
 ## Problem
@@ -107,3 +107,5 @@ You should take time to complete the following introductory Cadence tutorials be
 - Your implementation should make use of [resource-oriented design patterns](https://docs.onflow.org/cadence/design-patterns/). 
 - Your implementation should avoid known [Cadence anti-patterns](https://docs.onflow.org/cadence/anti-patterns/).
 - Your submission does not need to include a full test suite, but it should account for edge cases and security vulnerabilities that are unique to a blockchain environment.
+
+#### Disclaimer
