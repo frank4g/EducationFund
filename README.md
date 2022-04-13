@@ -108,4 +108,5 @@ You should take time to complete the following introductory Cadence tutorials be
 - Your implementation should avoid known [Cadence anti-patterns](https://docs.onflow.org/cadence/anti-patterns/).
 - Your submission does not need to include a full test suite, but it should account for edge cases and security vulnerabilities that are unique to a blockchain environment.
 
-#### Disclaimer
+## Disclaimer
+This solution is not fully battle-tested. Not proved that resource-oriented architecture is free from security issues like duplicated deploy attack.
