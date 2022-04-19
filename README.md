@@ -2,14 +2,14 @@
 # EducationFund
 This example demonstrates how to identify the caller - msg.sender using resource ownership in cadence.
 
-## Problem
+## Description
 A parent or guardian wishes to establish an education fund for their child in order help them pay for post-secondary studies. As a forward-thinking parent, they want to put the fund on a blockchain, and Flow is their top choice.
 
 The parent would like to make regular deposits of FLOW to the fund over a period of time until the child reaches adulthood. Nobody, including the parent, will be authorized to withdraw or transfer FLOW out of the fund during this time.
 
 The parent can set a withdrawal limit that determines how much FLOW the child can withdraw, but the parent can never decrease this limit. The limit decreases by the amount the child withdraws until it reaches zero, at which point the child cannot withdraw any more until the parent increases the limit again.
 
-## Requirements
+#### Requirements
 
 - The fund may only accept deposits in FLOW (`FlowToken`).
 - The fund can be stored in an account that is controlled by a third-party,
@@ -20,9 +20,12 @@ meaning that it cannot be controlled by the parent or the child.
 - Limits do not need to be adjusted automatically. 
 For example, the parent could submit one transaction per year, or one per week, that makes 
 necessary configuration changes.
-## Solution
+
+## Usage
+
+#### [Open Playground](https://play.onflow.org/local-project?type=account&id=local-account-0&storage=none)
 ```
-Use 0x01  for  FungibleToken
+Use 0x01 for  FungibleToken
 Use 0x02 for  FlowToken
 Use 0x03 for  Fund
 Use 0x04 for  Guardian/Parent
@@ -30,7 +33,7 @@ Use 0x05 for  Recipient/Child
 ```
 #### First, Deploy Contracts
 
-1.  Deploy FungibleToken to Account 0x01
+1. Deploy FungibleToken to Account 0x01
 2. Deploy FlowToken to Account 0x02
 3. Deploy EducationFund to Account 0x03
 
@@ -91,7 +94,9 @@ Use 0x05 for  Recipient/Child
         _;
     }
 ```
+<!--
 ## Reference
+
 #### Prerequisites
 
 You should take time to complete the following introductory Cadence tutorials before starting this assignment. A strong solution will make use of the fundamental concepts covered in these tutorials.
@@ -107,6 +112,6 @@ You should take time to complete the following introductory Cadence tutorials be
 - Your implementation should make use of [resource-oriented design patterns](https://docs.onflow.org/cadence/design-patterns/). 
 - Your implementation should avoid known [Cadence anti-patterns](https://docs.onflow.org/cadence/anti-patterns/).
 - Your submission does not need to include a full test suite, but it should account for edge cases and security vulnerabilities that are unique to a blockchain environment.
-
+-->
 ## Disclaimer
 This solution is not fully battle-tested. Not proved that resource-oriented architecture is free from security issues like duplicated deploy attack.
