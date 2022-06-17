@@ -39,7 +39,7 @@ Use 0x05 for  Recipient/Child
 
 #### Second, Submit Transactions
 
-1.  Submit FTCreateMinter, signed by Account 0x02. This transaction will create a minter for flow tokens.
+1. Submit FTCreateMinter, signed by Account 0x02. This transaction will create a minter for flow tokens.
 2. Submit FTCreateVault, signed by Account 0x03, 0x04, 0x05. This transaction will set publish and storage path for accounts holding flow tokens.
 3. Submit FTMint, signed by Account 0x02. This transaction will let a created minter to mint some flow tokens for testing and send tokens to guardians.
 4. Submit EFCreateSafeFund, signed by Account 0x03. This transaction will create a EducationFund and its fundvault.
