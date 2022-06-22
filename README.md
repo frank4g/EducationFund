@@ -52,7 +52,7 @@ Use 0x05 for  Recipient/Child
 1. Execute FTCheckBalance to check flowtoken balance of accounts used for testing
 2. Execute EFCheckSafeFundParams to check current params of safefund used for this test.
 
-## Msg.Sender Idenfication
+### Msg.Sender Idenfication
 #### [IdToken](https://github.com/frank4g/EducationFund/blob/main/contracts/EducationFund.cdc#L39)
 
 ```cdc
